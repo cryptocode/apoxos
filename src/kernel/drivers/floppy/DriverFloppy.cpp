@@ -186,7 +186,6 @@ ssize_t FloppyChannel::write(const uint8* buff, size_t length, bool block/*=true
 
 }
 
-
 /**
  * Initialize driver
  *
@@ -721,17 +720,9 @@ void floppyFormat(DriverFloppy* dev)
                 break;
             }
 
-        }// foreach track
+        } // foreach track
 
-        /*if(floppyMediaChanged(dev))
-        {
-                // TODO: errno
-            ::kprintf("MEDIA CHANGED - FORMATTING STOPPED\n");
-            floppyReset(dev);
-            break;
-    }*/
-
-    }// foreach head
+    } // foreach head
 
     floppyStopMotor(dev);
 
